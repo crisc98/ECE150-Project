@@ -25,12 +25,8 @@ void stripCmt(char arr[]){
 		
 	}
 }
-void stripWS(char arr[]){
-	for (int i=0; i<MAXLINE;i++)
-		if (arr[i]==' ')
-			for (int c=MAXLINE;c>0;c--)
-				arr[c-1]=arr[c];	
-}
+
+
 int firstRealChar(char arr[]){
 	for (int i=0;i<MAXLINE;i++){
 		if(arr[i]!=' '&&arr[i]!='\n'&&arr[i]!='\t'){
@@ -51,8 +47,7 @@ int getOPCode(char arr[]){
 	for (int i=0;i<5;i++){
 		opCode[i]=arr[x+i];
 	
-	//cout<<"L "<<lOpCode;
-	//cout<<"S: "<<sOpCode;
+
 	char *output = NULL;
 
 	for (int c=0;c<19;c++){
@@ -94,7 +89,7 @@ switch (getOPCode(arr)){
 				firstOperand[i]==arr[x+i];
 		}
 		case 0:
-		if(firstOperand=="R )
+		//if(firstOperand=="R )
 		break;
 		case 1:
 		//getOperands(opCode,2)=getOperands(opCode,0)+getOperands(opCode,1);
@@ -176,7 +171,7 @@ int main (int argc,char*argv[]){
 		stripCmt(oneline);
 		
 	}
-		//stripWS(oneline);
+		
 		
 		//if (!hasValidOperands(oneline))
 		//	cerr << "Error on line " << lC <<": Invalid Operands!";
