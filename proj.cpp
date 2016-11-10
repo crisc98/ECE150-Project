@@ -76,7 +76,7 @@ void exeCommand(int opCode){
 
 
 bool hasValidOperands(char arr[]){
-switch (getOPCode(arr)){
+/*switch (getOPCode(arr)){
 		int x=firstRealChar(arr);
 		int y=firstRealChar(arr);
 		int L=0;
@@ -140,6 +140,7 @@ switch (getOPCode(arr)){
 		//getOperands(opCode,0)+getOperands(opCode,1);
 		break;
 	}
+	*/
 
 
 }
