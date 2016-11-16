@@ -158,7 +158,7 @@ char* getOperand(char* arr){
 		
 		cout<<L<<endl;
 		cout<<oper<<endl;
-		char* temp=new char[sizeof(arr)];
+		//char* temp=new char[sizeof(arr)];
 		//shortArray(arr,L+1);
 		if(arr[x+L]!=','&&arr[x+L]!=0){
 			cout<<"FAIL"<<endl;
@@ -196,7 +196,7 @@ bool isMemLoc(char arr[]){
 	}
 	return false;
 }
-int getNumOperands(char arr[]){
+/*int getNumOperands(char arr[]){
 	int numOperands=0;
 	char *temp=arr;
 	while (firstRealChar(temp)!=-1){
@@ -209,25 +209,27 @@ int getNumOperands(char arr[]){
 		
 	}
 	return numOperands;
-}
+}*/
 
 
 int hasValidOperands(char arr[]){
 	//cout<< "GOOD";
 	int numOperands=0;
-	char* temp=new char[sizeof(arr)];
-	temp=arr;
-	oPC=getOPCode(temp);
+	
+	
+	oPC=getOPCode(arr);
 	cout<<"ARRAY: "<<arr<<endl;
-	shortArray(temp, opLen);
-	cout<<"TEMP: "<<temp<<endl;
+	shortArray(arr, opLen);
+	cout<<"TEMP: "<<arr<<endl;
 	//int numOperands=getNumOperands(temp);
 	char* init[3];
 	int i=0;
 	
 	
 	while (doneLine==false){
-		char* tempOper=getOperand(temp);
+		char* tempOper=getOperand(arr);
+		//cout<<getOperand(arr)<<endl;
+		//cout<<tempOper;
 		if(tempOper=="f"){
 			return -1;
 		}
@@ -239,9 +241,10 @@ int hasValidOperands(char arr[]){
 	for(int x=0;x<numOperands;x++){
 		operands[x]=init[x];
 	}
-	cout<< "Num Operands: " <<numOperands<<endl<<operands[0]<<operands[1]<<operands[2]<<endl;
+	cout<< "Num Operands: " <<numOperands<<endl;
+	cout<<operands[0]<<endl;
 	
-switch (oPC){
+/*switch (oPC){
 	
 	
 		
@@ -361,7 +364,7 @@ switch (oPC){
 		break;
 	}
 	return 0;
-
+*/
 
 }
 
